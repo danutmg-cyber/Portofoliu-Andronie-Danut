@@ -79,8 +79,10 @@ th {
     background: #003f88;
 }
 .school-banner {
-  position: relative;
-  top: 60px; /* se aliniază sub meniul fix */
+  position: fixed;
+  top: 55px; /* se aliniază sub meniul fix */
+  left: 0;
+  width: 100%;
   background: linear-gradient(90deg, #004999, #0073e6);
   color: white;
   text-align: center;
@@ -89,8 +91,8 @@ th {
   padding: 14px 0;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
   letter-spacing: 0.5px;
+  z-index: 998;
 }
-
 
 </style>
 </head>
