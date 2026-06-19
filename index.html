@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<title>Portofoliu Profesional – Autentificare</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f4f8;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 100%;
+    max-width: 420px;
+    margin: 60px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 16px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+button {
+    width: 100%;
+    padding: 12px;
+    background: #005bbb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+button:hover {
+    background: #004999;
+}
+.checkbox-area {
+    margin: 10px 0;
+}
+.error {
+    color: red;
+    font-size: 14px;
+    display: none;
+}
+.link {
+    color: #005bbb;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container" id="loginBox">
+    <h2>Autentificare</h2>
+    <input type="email" id="loginEmail" placeholder="Email">
+    <input type="password" id="loginPass" placeholder="Parolă">
+    <button onclick="login()">Intră în cont</button>
+    <p style="text-align:center; margin-top:15px;">
+        Nu ai cont? <span class="link" onclick="showRegister()">Creează cont</span>
+    </p>
+</div>
+
+<div class="container" id="registerBox" style="display:none;">
+    <h2>Creează cont</h2>
+
+    <input type="text" id="regName" placeholder="Nume complet">
+    <input type="email" id="regEmail" placeholder="Email">
+    <input type="password" id="regPass" placeholder="Parolă">
+    <input type="password" id="regPass2" placeholder="Confirmă parola">
+
+    <div class="checkbox-area">
+        <input type="checkbox" id="cond1"> Am citit și sunt de acord cu <span class="link" onclick="showTerms()">Condițiile platformei</span><br>
+        <input type="checkbox" id="cond2"> Sunt de acord cu prelucrarea datelor conform GDPR
+    </div>
+
+    <p class="error" id="regError">Completează toate câmpurile și bifează acordurile.</p>
+
+    <button onclick="register()">Creează cont</button>
+
+    <p style="text-align:center; margin-top:15px;">
+        Ai deja cont? <span class="link" onclick="showLogin()">Autentificare</span>
+    </p>
+</div>
+
+<script>
+function showRegister() {
+    document.getElementById("loginBox").style.display = "none";
+    document.getElementById("registerBox").style.display = "block";
+}
+
+function showLogin() {
+    document.getElementById("registerBox").style.display = "none";
+    document.getElementById("loginBox").style.display = "block";
+}
+
+function showTerms() {
+    window.open("conditii-platforma.html", "_blank");
+}
+
+function register() {
+    let name = document.getElementById("regName").value;
+    let email = document.getElementById("regEmail").value;
+    let pass = document.getElementById("regPass").value;
+    let pass2 = document.getElementById("regPass2").value;
+    let c1 = document.getElementById("cond1").checked;
+    let c2 = document.getElementById("cond2").checked;
+
+    if (!name || !email || !pass || !pass2 || !c1 || !c2) {
+        document.getElementById("regError").style.display = "block";
+        return;
+    }
+
+    if (pass !== pass2) {
+        document.getElementById("regError").innerText = "Parolele nu coincid.";
+        document.getElementById("regError").style.display = "block";
+        return;
+    }
+
+    let regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+    if (!regex.test(pass)) {
+        document.getElementById("regError").innerText = "Parola nu respectă cerințele.";
+        document.getElementById("regError").style.display = "block";
+        return;
+    }
+
+    alert("Cont creat cu succes! (Simulare interfață)");
+}
+
+function login() {
+    alert("Autentificare... (Simulare interfață)");
+}
+</script>
+
+</body>
+</html>
