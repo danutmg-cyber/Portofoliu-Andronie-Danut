@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<title>Upload Demo – CV</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    text-align: center;
+}
+button {
+    padding: 12px 20px;
+    background: #005bbb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+button:hover {
+    background: #004999;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Upload Demo – CV</h2>
+    <p>Aceasta este o simulare a funcției de încărcare a fișierelor.</p>
+
+    <input type="file" id="fileInput"><br><br>
+
+    <button onclick="uploadDemo()">Încarcă fișierul</button>
+
+    <p id="msg" style="margin-top:20px; font-weight:bold;"></p>
+</div>
+
+<script>
+function uploadDemo() {
+    let file = document.getElementById("fileInput").value;
+    if (!file) {
+        document.getElementById("msg").innerText = "Selectează un fișier înainte de a încărca.";
+        return;
+    }
+    document.getElementById("msg").innerText = "Fișier încărcat (DEMO) – în versiunea reală va fi salvat în portofoliu.";
+}
+</script>
+
+</body>
+</html>
