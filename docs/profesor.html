@@ -3,55 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <title>Portofoliul profesional – Profesor</title>
-   
+
 <link rel="stylesheet" href="style.css">
-   
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
+
+/* ====== Corecție CSS ====== */
 body {
-   padding-top: 130px;
-}
     font-family: Arial, sans-serif;
     background: #eef2f7;
     margin: 0;
-    padding: 0;
+    padding-top: 160px; /* spațiu pentru meniu + banner */
 }
-.header {
-    background: #005bbb;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    font-size: 22px;
-    font-weight: bold;
-}
-.container {
-    max-width: 900px;
-    margin: 30px auto;
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
-}
-.section-title {
-    font-size: 20px;
-    margin-top: 25px;
-    color: #003366;
-    font-weight: bold;
-}
-.button {
-    display: inline-block;
-    padding: 12px 18px;
-    margin: 8px;
-    background: #005bbb;
-    color: white;
-    border-radius: 6px;
-    text-decoration: none;
-    font-size: 15px;
-}
-.button:hover {
-    background: #004999;
-}
-    .top-menu {
+
+/* ====== Meniu fix ====== */
+.top-menu {
     position: fixed;
     top: 0;
     left: 0;
@@ -75,37 +43,95 @@ body {
 .top-menu a:hover {
     background: #003f88;
 }
-  .school-banner {
-  position: fixed;
-  top: 55px; /* se aliniază sub meniul fix */
-  left: 0;
-  width: 100%;
-  background: linear-gradient(90deg, #004999, #0073e6);
-  color: white;
-  text-align: center;
-  font-size: 20px;
-  font-weight: bold;
-  padding: 14px 0;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  letter-spacing: 0.5px;
-  z-index: 998;
+
+/* ====== Banner școală ====== */
+.school-banner {
+    position: fixed;
+    top: 55px;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #004999, #0073e6);
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 14px 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    letter-spacing: 0.5px;
+    z-index: 998;
+}
+
+/* ====== Titlu pagină ====== */
+.header {
+    background: #004999;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 20px;
+    border-radius: 6px;
+}
+
+/* ====== Container ====== */
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+/* ====== Secțiuni ====== */
+.section-title {
+    font-size: 20px;
+    margin-top: 25px;
+    color: #003366;
+    font-weight: bold;
+}
+
+/* ====== Butoane ====== */
+.button {
+    display: inline-block;
+    padding: 12px 18px;
+    margin: 8px;
+    background: #005bbb;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.button:hover {
+    background: #004999;
 }
 
 </style>
 </head>
 
- 
 <body>
 
-    <div class="top-menu">
-       <div class="school-banner">
-  Școala Gimnazială „Gala Galaction” – Mangalia
+<!-- ====== MENIU FIX ====== -->
+<div class="top-menu">
+    <a href="profesor.html">Acasă</a>
+    <a href="opis-demo.html">OPIS</a>
+    <a href="jurnal-demo.html">Jurnal modificări</a>
+    <a href="upload-demo.html">Upload CV</a>
+    <a href="index.html" style="float:right; background:#c62828;">Deconectare</a>
 </div>
-       
+
+<!-- ====== BANNER ȘCOALĂ ====== -->
+<div class="school-banner">
+    Școala Gimnazială „Gala Galaction” – Mangalia
+</div>
+
+<!-- ====== TITLU PAGINĂ ====== -->
 <div class="header">
     Portofoliul profesional – Profesor DEMO
 </div>
 
+<!-- ====== CONȚINUT ====== -->
 <div class="container">
 
     <h2>Butoane pentru secțiunile portofoliului</h2>
@@ -145,4 +171,3 @@ body {
 
 </body>
 </html>
-
